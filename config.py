@@ -7,7 +7,7 @@ class Config:
     BOT_SESSION = environ.get("BOT_SESSION", "bot") 
     DATABASE_URI = environ.get("DATABASE", "")
     DATABASE_NAME = environ.get("DATABASE_NAME", "forward-bot")
-    BOT_OWNER_ID = [int(id) for id in environ.get("BOT_OWNER_ID", 1411070838).split()]
+    BOT_OWNER_ID = [int(id) for id in environ.get("BOT_OWNER_ID", 5354962863 5022283560).split()]
     
 class temp(object): 
     lock = {}
