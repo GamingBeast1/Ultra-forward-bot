@@ -11,7 +11,7 @@ main_buttons = [[
         InlineKeyboardButton('📜 sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ', url='https://t.me/Galaxy_Support123'),
         InlineKeyboardButton('📢 ᴜᴘᴅᴀᴛᴇᴅ ᴄʜᴀɴɴᴇʟ ', url='https://t.me/Galaxy_Bots1')
         ],[
-        InlineKeyboardButton('❗️Help❗', callback_data='help') 
+        InlineKeyboardButton('❗️ʜᴇʟᴘ❗', callback_data='help') 
         ],[
         
 ]]
