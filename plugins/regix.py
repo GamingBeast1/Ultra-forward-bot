@@ -164,10 +164,10 @@ async def edit(msg, title, status, sts):
    estimated_total_time = TimeFormatter(milliseconds=estimated_total_time)
    estimated_total_time = estimated_total_time if estimated_total_time != '' else '0 s'
    if status in ["cancelled", "completed"]:
-      button.append([InlineKeyboardButton('💟 sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ 💟', url='https://t.me/venombotsupport')])
-      button.append([InlineKeyboardButton('💠 ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ 💠', url='https://t.me/venombotupdates')])
+      button.append([InlineKeyboardButton('☆ sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ ☆', url='https://t.me/Galaxy_Support123')])
+      button.append([InlineKeyboardButton('☆ ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ ☆', url='https://t.me/Galaxy_Bots1')])
    else:
-      button.append([InlineKeyboardButton('• ᴄᴀɴᴄᴇʟ', 'terminate_frwd')])
+      button.append([InlineKeyboardButton('• ᴄᴀɴᴄᴇʟ •', 'terminate_frwd')])
    await msg_edit(msg, text, InlineKeyboardMarkup(button))
    
 async def is_cancelled(client, user, msg, sts):
