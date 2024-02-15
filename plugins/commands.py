@@ -80,7 +80,7 @@ async def back(bot, query):
 
 @Client.on_callback_query(filters.regex(r'about'))
 async def about(bot, query):
-    buttons = [[InlineKeyboardButton('• back', callback_data='help')]]
+    buttons = [[InlineKeyboardButton('⇋ ʙᴀᴄᴋ ⇋', callback_data='help')]]
     reply_markup = InlineKeyboardMarkup(buttons)
     await query.message.edit_text(
         text=Translation.ABOUT_TXT,
