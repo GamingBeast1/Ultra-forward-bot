@@ -9,7 +9,7 @@ class Config:
      DATABASE_NAME = environ.get("DATABASE_NAME", "Cluster0") 
      BOT_OWNER_ID = [int(id) for id in environ.get("BOT_OWNER_ID", '').split()] 
   
- class temp(object):  
+class temp(object): 
      lock = {} 
      CANCEL = {} 
      forwardings = 0 
