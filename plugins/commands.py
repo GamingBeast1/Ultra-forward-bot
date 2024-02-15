@@ -8,10 +8,10 @@ from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, InputMediaDocument
 
 main_buttons = [[
-        InlineKeyboardButton('📜 Support Group', url='https://t.me/venombotupdates'),
-        InlineKeyboardButton('📢 Update Channel ', url='https://t.me/venombotsupport')
+        InlineKeyboardButton('📜 sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ', url='https://t.me/Galaxy_Support123'),
+        InlineKeyboardButton('📢 ᴜᴘᴅᴀᴛᴇᴅ ᴄʜᴀɴɴᴇʟ ', url='https://t.me/Galaxy_Bots1')
         ],[
-        InlineKeyboardButton('❗️Help', callback_data='help') 
+        InlineKeyboardButton('❗️Help❗', callback_data='help') 
         ],[
         
 ]]
@@ -43,24 +43,24 @@ async def restart(client, message):
     
 #==================Callback Functions==================#
 
-@Client.on_callback_query(filters.regex(r'^help'))
+@Client.on_callback_query(filters.regex(r'help'))
 async def helpcb(bot, query):
     buttons = [[
-            InlineKeyboardButton('💠 About 💠', callback_data='about'),
-            InlineKeyboardButton('💠 Status 💠', callback_data='status'),
+            InlineKeyboardButton('• ᴀʙᴏᴜᴛ •', callback_data='about'),
+            InlineKeyboardButton('• sᴛᴀᴛs •', callback_data='status'),
             ],[
-            InlineKeyboardButton('💠 How To Use Me ? 💠', callback_data='how_to_use')
+            InlineKeyboardButton('• ᴜsᴀɢᴇ ɢᴜɪᴅᴇ •', callback_data='how_to_use')
             ],[
-            InlineKeyboardButton('💠 Settings 💠', callback_data='settings#main')
+            InlineKeyboardButton('• sᴇᴛᴛɪɴɢs • ', callback_data='settings#main')
             ],[
-            InlineKeyboardButton('• back', callback_data='back')
+            InlineKeyboardButton('⇋ ʙᴀᴄᴋ ⇋', callback_data='back')
     ]]
     reply_markup = InlineKeyboardMarkup(buttons)
     await query.message.edit_text(
         text=Translation.HELP_TXT,
         reply_markup=reply_markup)
 
-@Client.on_callback_query(filters.regex(r'^how_to_use'))
+@Client.on_callback_query(filters.regex(r'how_to_use'))
 async def how_to_use(bot, query):
     buttons = [[InlineKeyboardButton('• back', callback_data='help')]]
     reply_markup = InlineKeyboardMarkup(buttons)
@@ -70,7 +70,7 @@ async def how_to_use(bot, query):
         disable_web_page_preview=True
     )
 
-@Client.on_callback_query(filters.regex(r'^back'))
+@Client.on_callback_query(filters.regex(r'back'))
 async def back(bot, query):
     reply_markup = InlineKeyboardMarkup(main_buttons)
     await query.message.edit_text(
@@ -78,7 +78,7 @@ async def back(bot, query):
        text=Translation.START_TXT.format(
                 query.from_user.first_name))
 
-@Client.on_callback_query(filters.regex(r'^about'))
+@Client.on_callback_query(filters.regex(r'about'))
 async def about(bot, query):
     buttons = [[InlineKeyboardButton('• back', callback_data='help')]]
     reply_markup = InlineKeyboardMarkup(buttons)
@@ -91,7 +91,7 @@ async def about(bot, query):
 @Client.on_callback_query(filters.regex(r'^status'))
 async def status(bot, query):
     users_count, bots_count = await db.total_users_bots_count()
-    buttons = [[InlineKeyboardButton('• back', callback_data='help')]]
+    buttons = [[InlineKeyboardButton('⇋ ʙᴀᴄᴋ ⇋', callback_data='help')]]
     reply_markup = InlineKeyboardMarkup(buttons)
     await query.message.edit_text(
         text=Translation.STATUS_TXT.format(users_count, bots_count, temp.forwardings),
